@@ -20,13 +20,24 @@ app.post('/api/sendEmail', (req, res) => {
             pass: 'example_password' // replace with generated password
         },
     });
-});
 
-// construct email
-const mailOptions = {
-    from: 'sender@example.com', // replace with sender address
-    to: userEmail, // email recipient
-    subject: 'Receipt for your purchase', // email subject
-    html: `<p>Thank you for your purchase!</p>
-           <p>Details: ${purchaseDetails}</p>` // email body
-};
+    // construct email
+    const mailOptions = {
+        from: 'sender@example.com', // replace with sender address
+        to: userEmail, // email recipient
+        subject: 'Receipt for your purchase', // email subject
+        html: `<p>Thank you for your purchase!</p>
+            <p>Details: ${purchaseDetails}</p>` // email body
+    };
+
+    // send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error occurred: ', error);
+            res.status(500).send('Failed to send email');
+        } else {
+            console.log('Email sent: ', info.response);
+            res.status(200).send('Email sent successfully');
+        }
+    });
+});
