@@ -32,3 +32,8 @@ const req = http.request(options, (res) => {
         console.log('Response from microservice: ', resBody);
     });
 });
+
+// error handler
+req.on('error', (error) => {
+    console.error('Error sending request: ', error);
+});
