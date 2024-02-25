@@ -21,3 +21,7 @@ In that example, Node.js's built-in `http` module is used to accomplish this:
 **5. Handle errors:** define an event handler to handle errors that occur during the request (`req.on('error')`): if an error occurs, it is logged to the console.
 
 **6. Send request:** finally, the request data is written to the request body using `req.write(data)` and then the request is ended with `req.end()`.
+
+### How the microservice responds to requests
+
+The Email Notification Microservice listens for incoming POST requests on the `/api/sendEmail` endpoint, and responds to them with either a success message or an error message.
