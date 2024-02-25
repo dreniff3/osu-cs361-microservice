@@ -37,3 +37,7 @@ const req = http.request(options, (res) => {
 req.on('error', (error) => {
     console.error('Error sending request: ', error);
 });
+
+// send request
+req.write(data);
+req.end(); // end request
