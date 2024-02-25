@@ -25,3 +25,7 @@ In that example, Node.js's built-in `http` module is used to accomplish this:
 ### How the microservice responds to requests
 
 The Email Notification Microservice listens for incoming POST requests on the `/api/sendEmail` endpoint, and responds to them with either a success message or an error message.
+
+### UML Sequence Diagram
+
+![UML diagram](microserviceUMLdiagram.png)
