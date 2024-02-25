@@ -17,3 +17,18 @@ const options = {
         'Content-Length': data.length,
     },
 };
+
+// create new request
+const req = http.request(options, (res) => {
+    let resBody = '';
+
+    // concatenate data as it is received
+    res.on('data', (chunk) => {
+        resBody += chunk;
+    });
+
+    // log response when request is completed
+    res.on('end', () => {
+        console.log('Response from microservice: ', resBody);
+    });
+});
