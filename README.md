@@ -34,7 +34,7 @@ The Email Notification Microservice listens for incoming POST requests on the `/
 
 The Email Notification Microservice will not work with Gmail unless you **enable 2-Step Verification** and **generate an Application password**:
 
-1. Go to your [Google Account](https://myaccount.google.com/).
+1. Go to the [Google Account](https://myaccount.google.com/) you will use as the sender address for the microservice.
 2. Select **Security**.
 3. Under "Signing in to Google", select **2-Step Verification** and enable 2-Step Verification.
 4. At the bottom of the page, select **App passwords**.
