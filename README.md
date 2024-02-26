@@ -29,3 +29,16 @@ The Email Notification Microservice listens for incoming POST requests on the `/
 ### UML Sequence Diagram
 
 ![UML diagram](microserviceUMLdiagram.png)
+
+#### Note to developers:
+
+The Email Notification Microservice will not work with Gmail unless you **enable 2-Step Verification** and **generate an Application password**:
+
+1. Go to your [Google Account](https://myaccount.google.com/).
+2. Select **Security**.
+3. Under "Signing in to Google", select **2-Step Verification** and enable 2-Step Verification.
+4. At the bottom of the page, select **App passwords**.
+5. Enter a name for your app.
+6. Click **Create**.
+7. The app password is the 16-character code that generates on your device. <--- This is what will replace `'example_password'` in `emailService.js`.
+8. Select **Done**.
