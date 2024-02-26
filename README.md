@@ -16,7 +16,7 @@ In `tester.js`, Node.js's built-in `http` module is used to accomplish this. Bel
 
 **4. Handle response:** event handlers to handle the response from the Email Notification Microservice are defined: when data is received (`res.on('data')`), it is concatenated to a `resBody` variable; when the response is complete (`res.on('end')`), the `resBody` is logged to the console.
 
-**5. Handle errors:** an event handler to handle errors that occur during the request (`req.on('error')`) is defined: if an error occurs, it is logged to the console.
+**5. Handle errors:** an event handler to handle errors that occur during the request is defined (`req.on('error')`): if an error occurs, it is logged to the console.
 
 **6. Send request:** finally, the request data is written to the request body using `req.write(data)` and then the request is ended with `req.end()`.
 
