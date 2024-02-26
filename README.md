@@ -2,7 +2,7 @@
 
 ### How to make requests to microservice
 
-Communication between your program and the microservice is achieved via HTTP requests and responses. Your program should send a POST request to the Email Notification Microservice.
+Communication between your program and the microservice is achieved via HTTP requests and responses. Your program should send a POST request to the Email Notification Microservice endpoint.
 
 Refer to the [`tester.js`](https://github.com/dreniff3/osu-cs361-microservice/blob/main/tester.js "Test File") file for an example of how that can be done.
 
